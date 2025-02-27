@@ -25,32 +25,29 @@ How does it work?
 
 ## Usage
 ### Build
-1. Copy the code from **[`encode-build.js`](/src/encode-build.js)**;
-2. Enter JavaScript code between the single quotes of the `input` variable;\
-```const input = '🔴';```
-3. Run the code inside a console window;
-4. Copy the `console.log()` response;
-5. This is the script that runs your hidden code.
+1. Copy the code from **[`build.js`](/src/build.js)**;
+2. Put JavaScript code as a string in the first variable;
+3. Run the code;
+4. Copy the `console.log()` response;\
+This is the script that runs your hidden code.
 
 ### Encode
 1. Copy the code from **[`encode.js`](/src/encode.js)**;
-2. Enter JavaScript code between the single quotes of the `input` variable;\
-```const input = '🔴';```
-3. Run the code inside a console window;
-4. Copy the `console.log()` response for the decode script, including the single quotes.
+2. Put JavaScript code as a string in the first variable;
+3. Run the code;
+4. Copy the `console.log()` response;\
+This is your input for the decode script, including the single quotes.
 
 ### Decode
-1. Copy the code from **[`decode-append.js`](/src/decode-append.js)** or **[`decode-eval.js`](/src/decode-eval.js)**;
-2. Replace the value of the `a` variable, including the single quotes, with the response from the [encode](#encode) script;\
-```a='🔴';```
+1. Copy the code from **[`decode.js`](/src/decode.js)**;
+2. Replace the value of the first variable, with the response from the [encode](#encode) script, including the single quotes.;
 3. Run the code.
 
 ## Features
 A few examples can be found in the [`/src`](/src) folder:
-- **[`decode-append.js`](/src/decode-append.js)**: Decodes the invisible code and appends it to the DOM;
-- **[`decode-eval.js`](/src/decode-eval.js)**: Decodes the invisible code and evaluates/executes it after decoding;
-- **[`encode.js`](/src/encode.js)**: Encodes the string in the `input` variable and outputs the result using `console.log()`;
-- **[`encode-build.js`](/src/encode-build.js)**: Encodes the string in the `input` variable and returns the decode script that includes the encoded text, outputting it using `console.log()`.
+- **[`build.js`](/src/build.js)**: Encodes the code string to invisible code and returns a script that decodes the invisible code and runs it;
+- **[`decode.js`](/src/decode.js)**: Decodes the invisible code to a code string;
+- **[`encode.js`](/src/encode.js)**: Encodes the code string to invisible code.
 
 ## License
 Code released under the [MIT license](LICENSE.md).
