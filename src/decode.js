@@ -9,13 +9,13 @@ const binaryString = encodedString
 	.replace(/‍/g, 1);
 
 // Split the binary string into 8-bit chunks (1 byte each)
-const byteStrings = input.match(/.{1,8}/g);
+const byteStrings = binaryString.match(/.{1,8}/g);
 
 // Convert each 8-bit binary chunk into an integer
 const byteArray = byteStrings.map((byte) => parseInt(byte, 2));
 
 // Create an unsigned int(8) array from the byte array
-const uint8Array = new Uint8Array().buffer;
+const uint8Array = new Uint8Array(byteArray).buffer;
 
 // Decode the byte array into a string
 const decodedCode = new TextDecoder().decode(uint8Array);
